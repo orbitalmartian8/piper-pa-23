@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- PEDESTAL -->
+  <model>
+    <path>Pedestal/pedestal.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.220 </z-m>
+      <pitch-deg> -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- ADF -->
+  <model>
+    <path>Instruments/adf/adf.xml</path>
+    <offsets>
+      <x-m> -0.004 </x-m>
+      <y-m> -0.148 </y-m>
+      <z-m> -0.045 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.22 </x-offset>
+        <y-offset> 1.22 </y-offset>
+        <z-offset> 1.22 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- AI -->
+  <model>
+    <path>Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.359 </y-m>
+      <z-m>  0.061 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.1 </x-offset>
+        <y-offset> 1.1 </y-offset>
+        <z-offset> 1.1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.252 </y-m>
+      <z-m>  0.061 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.1 </x-offset>
+        <y-offset> 1.1 </y-offset>
+        <z-offset> 1.1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m>  0.061 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.1 </x-offset>
+        <y-offset> 1.1 </y-offset>
+        <z-offset> 1.1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- COMPASS -->
+  <model>
+    <path>Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m> 0.02046 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.32506 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FUEL QUANTITY-->
+  <model>
+    <path>Instruments/fuel/fuelL.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.132 </y-m>
+      <z-m> -0.054 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/fuel/fuelR.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.178 </y-m>
+      <z-m> -0.054 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- FUEL PRESSURE -->
+  <model>
+    <path>Instruments/fuelpress/fuelpressL.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.132 </y-m>
+      <z-m> -0.086 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/fuelpress/fuelpressR.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.178 </y-m>
+      <z-m> -0.086 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- FUEL TEMPERATURE -->
+  <model>
+    <path>Instruments/fueltemp/fueltempL.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.132 </y-m>
+      <z-m> -0.118 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/fueltemp/fueltempR.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.178 </y-m>
+      <z-m> -0.118 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- HDG -->
+  <model>
+    <path>Instruments/hdg/hdg.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.148 </y-m>
+      <z-m>  0.061 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.96 </x-offset>
+        <y-offset> 0.96 </y-offset>
+        <z-offset> 0.96 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- HSI -->
+  <model>
+    <path>Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m> -0.002 </x-m>
+      <y-m> -0.359 </y-m>
+      <z-m> -0.050 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.7 </x-offset>
+        <y-offset> 0.7 </y-offset>
+        <z-offset> 0.7 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- KAP140 -->
+  <model>
+    <path>Instruments/kap140/kap140.xml</path>
+    <offsets>
+      <x-m> -0.013 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.070 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KNS80 -->
+  <model>
+    <path>Instruments/kns80/kns80.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.010 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KT70 -->
+  <model>
+    <path>Instruments/kt70/kt70.xml</path>
+    <offsets>
+      <x-m> -0.002 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.050 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KX165 -->
+  <model>
+    <path>Instruments/kx165/kx165-1.xml</path>
+    <offsets>
+      <x-m> -0.011 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.117 </z-m>
+    </offsets>
+  </model>
+
+  <!-- MAN -->
+  <model>
+    <path>Instruments/man/man.xml</path>
+    <offsets>
+      <x-m> -0.010 </x-m>
+      <y-m>  0.153 </y-m>
+      <z-m>  0.061 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.1 </x-offset>
+        <y-offset> 1.1 </y-offset>
+        <z-offset> 1.1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- OIL PRESSURE -->
+  <model>
+    <path>Instruments/oilpress/oilpressL.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.132 </y-m>
+      <z-m> -0.149 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/oilpress/oilpressR.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.178 </y-m>
+      <z-m> -0.149 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- OIL TEMPERATURE -->
+  <model>
+    <path>Instruments/oiltemp/oiltempL.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.132 </y-m>
+      <z-m> -0.180 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/oiltemp/oiltempR.xml</path>
+    <offsets>
+      <x-m> -0.003 </x-m>
+      <y-m>  0.178 </y-m>
+      <z-m> -0.180 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.2 </x-offset>
+        <y-offset> 1.2 </y-offset>
+        <z-offset> 1.2 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- PEDALS -->
+  <model>
+    <path>Instruments/pedals/all-pedals.xml</path>
+  </model>
+
+  <!-- RPM -->
+  <model>
+    <path>Instruments/rpm/rpm0.xml</path>
+    <offsets>
+      <x-m> -0.010 </x-m>
+      <y-m>  0.263 </y-m>
+      <z-m>  0.061 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.1 </x-offset>
+        <y-offset> 1.1 </y-offset>
+        <z-offset> 1.1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- RPM -->
+  <model>
+    <path>Instruments/rpm/rpm1.xml</path>
+    <offsets>
+      <x-m> -0.010 </x-m>
+      <y-m>  0.373 </y-m>
+      <z-m>  0.061 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.1 </x-offset>
+        <y-offset> 1.1 </y-offset>
+        <z-offset> 1.1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- TURN -->
+  <model>
+    <path>Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m> -0.004 </x-m>
+      <y-m> -0.463 </y-m>
+      <z-m> -0.045 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.1 </x-offset>
+        <y-offset> 1.1 </y-offset>
+        <z-offset> 1.1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- VOR -->
+  <model>
+    <path>Instruments/vor/vor.xml</path>
+    <offsets>
+      <x-m> -0.006 </x-m>
+      <y-m> -0.148 </y-m>
+      <z-m> -0.153 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.1 </x-offset>
+        <y-offset> 1.1 </y-offset>
+        <z-offset> 1.1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.001 </x-m>
+      <y-m> -0.252 </y-m>
+      <z-m> -0.045 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.1 </x-offset>
+        <y-offset> 1.1 </y-offset>
+        <z-offset> 1.1 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- YOKES -->
+  <model>
+    <path>Instruments/yokes/all-yokes.xml</path>
+  </model>
+
+</PropertyList>

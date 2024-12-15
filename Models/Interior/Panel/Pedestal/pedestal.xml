@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>pedestal.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fond</object-name>
+    <object-name>throttleL</object-name>
+    <object-name>throttleR</object-name>
+    <object-name>propellerL</object-name>
+    <object-name>propellerR</object-name>
+    <object-name>mixtureL</object-name>
+    <object-name>mixtureR</object-name>
+    <object-name>flaps</object-name>
+    <object-name>gear</object-name>
+    <object-name>pump</object-name>
+    <object-name>lev0</object-name>
+    <object-name>lev1</object-name>
+    <object-name>lev2</object-name>
+    <object-name>lev3</object-name>
+    <object-name>lev4</object-name>
+    <object-name>trim</object-name>
+    <object-name>lampeR</object-name>
+    <object-name>lampeVG</object-name>
+    <object-name>lampeVC</object-name>
+    <object-name>lampeVD</object-name>
+    <object-name>lampeRON</object-name>
+    <object-name>lampeVGON</object-name>
+    <object-name>lampeVCON</object-name>
+    <object-name>lampeVDON</object-name>
+    <object-name>Switch0</object-name>
+    <object-name>Switch1</object-name>
+    <object-name>Switch2</object-name>
+    <object-name>Switch3</object-name>
+    <object-name>Switch4</object-name>
+    <object-name>texte</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampeVG</object-name>
+    <object-name>lampeVC</object-name>
+    <object-name>lampeVD</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <red>   0.0 </red>
+      <green> 0.1 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampeR</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <red>   0.1 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampeVGON</object-name>
+    <object-name>lampeVCON</object-name>
+    <object-name>lampeVDON</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <red>   0 </red>
+      <green> 2 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampeRON</object-name>
+    <condition>
+      <property>/controls/electric/battery-switch</property>
+    </condition>
+    <emission>
+      <red>   2 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <!-- Throttle power -->
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>throttleL</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/throttle</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>throttleR</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/throttle</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttleL</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m>  0.04564 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.09073 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>throttleR</object-name>
+    <property>controls/engines/engine[1]/throttle</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m>  0.04564 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.09073 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Propeller pitch -->
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>propellerL</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>propellerR</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/propeller-pitch</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>propellerL</object-name>
+    <property>controls/engines/engine[0]/propeller-pitch</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m>  0.04564 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.09073 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>propellerR</object-name>
+    <property>controls/engines/engine[1]/propeller-pitch</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m>  0.04564 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.09073 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Mixture -->
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>mixtureL</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/mixture</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>mixtureR</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/mixture</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>0.1</factor>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>mixtureL</object-name>
+    <property>controls/engines/engine[0]/mixture</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m>  0.04564 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.09073 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>mixtureR</object-name>
+    <property>controls/engines/engine[1]/mixture</property>
+    <factor> -90 </factor>
+    <center>
+      <x-m>  0.04564 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.09073 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <drag-direction>vertical</drag-direction>
+    <object-name>flaps</object-name>
+    <value>0.0</value>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/flight/flaps</property>
+        <min>0</min>
+        <max>1</max>
+        <factor>-0.25</factor>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flaps</object-name>
+    <property>/controls/flight/flaps</property>
+    <factor> 80 </factor>
+    <center>
+      <x-m>  0.06752 </x-m>
+      <y-m> -0.08040 </y-m>
+      <z-m> -0.17344 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>gear</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/gear/gear-down</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>gear</object-name>
+    <property>gear/gear[0]/position-norm</property>
+    <factor> 80 </factor>
+    <center>
+      <x-m>  0.06752 </x-m>
+      <y-m> -0.08040 </y-m>
+      <z-m> -0.17344 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lampeVCON</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[0]/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lampeVGON</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lampeVDON</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[2]/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lampeRON</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value>0</value>
+        </equals>
+        <equals>
+          <property>gear/gear[1]/position-norm</property>
+          <value>0</value>
+        </equals>
+        <equals>
+          <property>gear/gear[2]/position-norm</property>
+          <value>0</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>
+
+</PropertyList>
