@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Wheels mode -->
+  <!-- Noze wheel -->
+  <model>
+    <path>ground0.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>wheels</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -3.35806 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.57268 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Left wheel -->
+  <model>
+    <path>ground1.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>wheels</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -1.20331 </x-m>
+      <y-m> -1.73349 </y-m>
+      <z-m> -1.57006 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right wheel -->
+  <model>
+    <path>ground2.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>wheels</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -1.20331 </x-m>
+      <y-m>  1.73349 </y-m>
+      <z-m> -1.57006 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Amphibian mode -->
+  <!-- Noze Left wheel -->
+  <model>
+    <path>ground0.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -4.50454 </x-m>
+      <y-m> -1.15665 </y-m>
+      <z-m> -2.78061 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Center Left wheel -->
+  <model>
+    <path>ground1.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -0.50782 </x-m>
+      <y-m> -1.15665 </y-m>
+      <z-m> -2.72595 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Noze Right wheel -->
+  <model>
+    <path>ground2.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -4.50454 </x-m>
+      <y-m>  1.15665 </y-m>
+      <z-m> -2.78061 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Center Right wheel -->
+  <model>
+    <path>ground3.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m> -0.50782 </x-m>
+      <y-m>  1.15665 </y-m>
+      <z-m> -2.72595 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

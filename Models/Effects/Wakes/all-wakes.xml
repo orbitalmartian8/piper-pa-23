@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left wakes -->
+  <model>
+    <path>wakeG.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m>          -3.83639 </x-m>
+      <y-m>          -1.15100 </y-m>
+      <z-m>          -2.14369 </z-m>
+      <heading-deg> -40 </heading-deg>
+      <pitch-deg>    -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>wakeG.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m>          -3.83639 </x-m>
+      <y-m>          -1.15100 </y-m>
+      <z-m>          -2.14369 </z-m>
+      <heading-deg> 40 </heading-deg>
+      <pitch-deg>   -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>wakeG.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m>        -0.80991 </x-m>
+      <y-m>        -1.15100 </y-m>
+      <z-m>        -2.49192 </z-m>
+      <pitch-deg>  -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Right wakes -->
+  <model>
+    <path>wakeG.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m>          -3.83639 </x-m>
+      <y-m>           1.15100 </y-m>
+      <z-m>          -2.14369 </z-m>
+      <heading-deg> -40 </heading-deg>
+      <pitch-deg>    -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>wakeG.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m>          -3.83639 </x-m>
+      <y-m>           1.15100 </y-m>
+      <z-m>          -2.14369 </z-m>
+      <heading-deg> 40 </heading-deg>
+      <pitch-deg>   -5 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>wakeG.xml</path>
+    <condition>
+      <equals>
+        <property>sim/model/mode</property>
+        <value>amphibian</value>
+      </equals>
+    </condition>
+    <offsets>
+      <x-m>        -0.80991 </x-m>
+      <y-m>         1.15100 </y-m>
+      <z-m>        -2.49192 </z-m>
+      <pitch-deg>  -5 </pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

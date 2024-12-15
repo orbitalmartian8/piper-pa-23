@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left -->
+  <model>
+    <path>tiptrailL.xml</path>
+    <offsets>
+      <x-m> -0.30670 </x-m>
+      <y-m> -5.01633 </y-m>
+      <z-m> -0.49418 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>tiptrailR.xml</path>
+    <offsets>
+      <x-m> -0.30670 </x-m>
+      <y-m>  5.01633 </y-m>
+      <z-m> -0.49418 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
