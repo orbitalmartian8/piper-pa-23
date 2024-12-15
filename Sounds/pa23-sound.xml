@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <fx>
+
+    <!-- Moteur 1 -->
+    <crank>
+      <name>engstartIN1</name>
+      <path>starter-in.wav</path>
+      <condition>
+        <property>/engines/engine[0]/cranking</property>
+        <not><property>/engines/engine[0]/running</property></not>
+        <property>sim/current-view/internal</property>
+      </condition>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <offset>-0.4</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <crank>
+      <name>engstartOUT1</name>
+      <path>starter-out.wav</path>
+      <condition>
+        <property>/engines/engine[0]/cranking</property>
+        <not><property>/engines/engine[0]/running</property></not>
+        <not><property>sim/current-view/internal</property></not>
+      </condition>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <offset>-0.4</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <crank>
+      <name>crankIN1</name>
+      <mode>looped</mode>
+      <path>starter-in.wav</path>
+      <condition>
+        <property>/engines/engine[0]/cranking</property>
+        <not><property>/engines/engine[0]/running</property></not>
+        <property>sim/current-view/internal</property>
+      </condition>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <offset>-0.5</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/cranking</property>
+        <factor>1.0</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <crank>
+      <name>crankOUT1</name>
+      <mode>looped</mode>
+      <path>starter-out.wav</path>
+      <condition>
+        <property>/engines/engine[0]/cranking</property>
+        <not><property>/engines/engine[0]/running</property></not>
+        <not><property>sim/current-view/internal</property></not>
+      </condition>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <offset>-0.5</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/cranking</property>
+        <factor>1.0</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <engine>
+      <name>engine-internal1</name>
+      <mode>looped</mode>
+      <path>running-in.wav</path>
+      <condition>
+        <and>
+          <property>sim/current-view/internal</property>
+          <greater-than>
+            <property>engines/engine[0]/rpm</property>
+            <value>100</value>
+          </greater-than>
+        </and>
+      </condition>
+      <pitch>
+        <property>/engines/engine[0]/rpm</property>
+        <factor> 0.0005 </factor>
+        <min> 0 </min>
+        <max> 2 </max>
+        <offset> 0.1 </offset>
+      </pitch>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <property>/engines/engine[0]/rpm</property>
+        <factor> 0.0005 </factor>
+        <min> 0 </min>
+        <max> 2 </max>
+        <offset> 0.5 </offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <engine>
+      <name>engine-external1</name>
+      <mode>looped</mode>
+      <path>running-out.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine[0]/rpm</property>
+            <value>100</value>
+          </greater-than>
+          <not><property>sim/current-view/internal</property></not>
+        </and>
+      </condition>
+      <pitch>
+        <property>engines/engine[0]/rpm</property>
+        <factor> 0.0005 </factor>
+        <min> 0 </min>
+        <max> 2 </max>
+        <offset> 0.10 </offset>
+      </pitch>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <property>/engines/engine[0]/rpm</property>
+        <factor> 0.00033 </factor>
+        <min> 0.2 </min>
+        <max> 1.0 </max>
+        <offset> 0 </offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <propeller>
+      <name>propeller-internal1</name>
+      <mode>looped</mode>
+      <path>propeller-in.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine[0]/rpm</property>
+            <value>100</value>
+          </greater-than>
+          <property>sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min> 0.2 </min>
+        <max> 1.0 </max>
+      </volume>
+      <volume>
+        <factor> 0.5 </factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/mp-osi</property>
+        <factor> 0.0036 </factor>
+        <min> 0.5 </min>
+        <max> 2.0 </max>
+        <offset> 0.9 </offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </propeller>
+
+    <propeller>
+      <name>propeller-external1</name>
+      <mode>looped</mode>
+      <path>propeller-out.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine[0]/rpm</property>
+            <value>100</value>
+          </greater-than>
+          <not><property>sim/current-view/internal</property></not>
+        </and>
+      </condition>
+      <volume>
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min> 0.2 </min>
+        <max> 1.0 </max>
+      </volume>
+      <volume>
+        <factor> 0.5 </factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/mp-osi</property>
+        <factor> 0.0036 </factor>
+        <min> 0.5 </min>
+        <max> 2.0 </max>
+        <offset> 0.9 </offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </propeller>
+
+    <!-- Moteur 2 -->
+    <crank>
+      <name>engstartIN2</name>
+      <path>starter-in.wav</path>
+      <condition>
+        <property>/engines/engine[1]/cranking</property>
+        <not><property>/engines/engine[1]/running</property></not>
+        <property>sim/current-view/internal</property>
+      </condition>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <offset>-0.4</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <crank>
+      <name>engstartOUT2</name>
+      <path>starter-out.wav</path>
+      <condition>
+        <property>/engines/engine[1]/cranking</property>
+        <not><property>/engines/engine[1]/running</property></not>
+        <not><property>sim/current-view/internal</property></not>
+      </condition>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <offset>-0.4</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <crank>
+      <name>crankIN2</name>
+      <mode>looped</mode>
+      <path>starter-in.wav</path>
+      <condition>
+        <property>/engines/engine[1]/cranking</property>
+        <not><property>/engines/engine[1]/running</property></not>
+        <property>sim/current-view/internal</property>
+      </condition>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <offset>-0.5</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/cranking</property>
+        <factor>1.0</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <crank>
+      <name>crankOUT2</name>
+      <mode>looped</mode>
+      <path>starter-out.wav</path>
+      <condition>
+        <property>/engines/engine[1]/cranking</property>
+        <not><property>/engines/engine[1]/running</property></not>
+        <not><property>sim/current-view/internal</property></not>
+      </condition>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <offset>-0.5</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/cranking</property>
+        <factor>1.0</factor>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+
+    <engine>
+      <name>engine-internal2</name>
+      <mode>looped</mode>
+      <path>running-in.wav</path>
+      <condition>
+        <and>
+          <property>sim/current-view/internal</property>
+          <greater-than>
+            <property>engines/engine[1]/rpm</property>
+            <value>100</value>
+          </greater-than>
+        </and>
+      </condition>
+      <pitch>
+        <property>/engines/engine[1]/rpm</property>
+        <factor> 0.0005 </factor>
+        <min> 0 </min>
+        <max> 2 </max>
+        <offset> 0.1 </offset>
+      </pitch>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <property>/engines/engine[1]/rpm</property>
+        <factor> 0.0005 </factor>
+        <min> 0 </min>
+        <max> 2 </max>
+        <offset> 0.5 </offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <engine>
+      <name>engine-external2</name>
+      <mode>looped</mode>
+      <path>running-out.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine[1]/rpm</property>
+            <value>100</value>
+          </greater-than>
+          <not><property>sim/current-view/internal</property></not>
+        </and>
+      </condition>
+      <pitch>
+        <property>engines/engine[1]/rpm</property>
+        <factor> 0.0005 </factor>
+        <min> 0 </min>
+        <max> 2 </max>
+        <offset> 0.10 </offset>
+      </pitch>
+      <position>
+        <x> -2.69222 </x>
+        <y> -2.21025 </y>
+        <z> -0.65395 </z>
+      </position>
+      <volume>
+        <property>/engines/engine[1]/rpm</property>
+        <factor> 0.00033 </factor>
+        <min> 0.2 </min>
+        <max> 1.0 </max>
+        <offset> 0 </offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+
+    <propeller>
+      <name>propeller-internal2</name>
+      <mode>looped</mode>
+      <path>propeller-in.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine[1]/rpm</property>
+            <value>100</value>
+          </greater-than>
+          <property>sim/current-view/internal</property>
+        </and>
+      </condition>
+      <volume>
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min> 0.2 </min>
+        <max> 1.0 </max>
+      </volume>
+      <volume>
+        <factor> 0.5 </factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/mp-osi</property>
+        <factor> 0.0036 </factor>
+        <min> 0.5 </min>
+        <max> 2.0 </max>
+        <offset> 0.9 </offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </propeller>
+
+    <propeller>
+      <name>propeller-external2</name>
+      <mode>looped</mode>
+      <path>propeller-out.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>engines/engine[1]/rpm</property>
+            <value>100</value>
+          </greater-than>
+          <not><property>sim/current-view/internal</property></not>
+        </and>
+      </condition>
+      <volume>
+        <property>/orientation/alpha-deg</property>
+        <type>log</type>
+        <min> 0.2 </min>
+        <max> 1.0 </max>
+      </volume>
+      <volume>
+        <factor> 0.5 </factor>
+      </volume>
+      <pitch>
+        <property>/engines/engine[1]/mp-osi</property>
+        <factor> 0.0036 </factor>
+        <min> 0.5 </min>
+        <max> 2.0 </max>
+        <offset> 0.9 </offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </propeller>
+
+    <!-- ********************************************************************** -->
+    <rumble>
+      <name>rumble</name>
+      <mode>looped</mode>
+      <path>Sounds/rumble.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <type>log</type>
+        <factor>0.25</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </rumble>
+
+    <gear>
+      <name>gear</name>
+      <mode>in-transit</mode>
+      <path>Sounds/gear.wav</path>
+      <property>/gear/gear[0]/position-norm</property>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </gear>
+
+    <squeal>
+      <name>squeal</name>
+      <path>wow.wav</path>
+      <condition>
+        <or>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
+        </or>
+      </condition>
+      <volume>
+        <property>/velocities/speed-down-fps</property>
+        <factor>0.5</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.1</factor>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <internal>dt_stop</internal>
+        <factor>0.05</factor>
+        <max>1.0</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0025</factor>
+        <offset>1.0</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </squeal>
+
+    <flap>
+      <name>flaps</name>
+      <mode>in-transit</mode>
+      <path>Sounds/flaps.wav</path>
+      <property>/surface-positions/flaps-pos-norm</property>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </flap>
+
+    <wind>
+      <name>wind</name>
+      <mode>looped</mode>
+      <path>Sounds/wind.wav</path>
+      <property>/velocities/airspeed-kt</property>
+      <volume>
+        <property>/position/altitude-ft</property>
+        <factor>-0.000015</factor>
+        <offset>1.0</offset>
+        <min>0.0</min>
+        <max>1.0</max>
+      </volume>
+      <volume>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0015</factor>
+        <min>0.0</min>
+        <max>0.25</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0035</factor>
+        <offset>1.25</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </wind>
+
+    <stall>
+      <name>stall</name>
+      <mode>looped</mode>
+      <path>Sounds/stall.wav</path>
+      <property>/sim/alarms/stall-warning</property>
+      <volume>
+        <property>/sim/alarms/stall-warning</property>
+        <max>1.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </stall>
+
+    <kap140-disengage>
+      <name>KAP140 disengage</name>
+      <path>kap140-disengage.wav</path>
+      <condition>
+        <or>
+          <equals>
+            <property>autopilot/kap140/panel/state</property>
+            <value>3</value>
+          </equals>
+          <property>autopilot/kap140/panel/ap-timer</property>
+        </or>
+      </condition>
+      <volume><factor>0.2</factor></volume>
+      <position>
+        <x>-0.444</x>
+        <y> 0.229</y>
+        <z> 0.312</z>
+      </position>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </kap140-disengage>
+
+    <kap140-alert>
+      <name>KAP140 altitude alerter</name>
+      <path>kap140-alert.wav</path>
+      <condition>
+        <property>autopilot/kap140/panel/alt-alert-sound</property>
+      </condition>
+      <volume><factor>0.2</factor></volume>
+      <position>
+        <x>-0.444</x>
+        <y> 0.229</y>
+        <z> 0.312</z>
+      </position>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </kap140-alert>
+
+    <!--                  Toggle Switches                  -->
+    <click>
+      <name>Battery on</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/electric/battery-switch</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Battery off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/electric/battery-switch</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Fuel Pump on</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/engines/engine/fuel-pump</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Fuel Pump off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/engines/engine/fuel-pump</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Landing Light On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/landing-light</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Landing Light Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/landing-light</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Magnetos-off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/engines/engine/magnetos</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Strobe Lights White</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <equals>
+          <property>controls/switches/strobes</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Strobe Lights Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/strobes</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Avionics Master On</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <property>controls/switches/avionic-master</property>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <click>
+      <name>Avionics Master Off</name>
+      <path>Sounds/click.wav</path>
+      <condition>
+        <not>
+          <property>controls/switches/avionic-master</property>
+        </not>
+      </condition>
+      <volume>
+        <factor>1.0</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </click>
+
+    <!-- DOOR -->
+    <door>
+      <name>CanopyOpen1</name>
+      <path>DoorOpen.wav</path>
+      <condition>
+        <greater-than>
+          <property>sim/model/door-positions/crew/position-norm</property>
+          <value>0.1</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <factor>0.8</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
+    <door>
+      <name>CanopyClose1</name>
+      <path>DoorClosed.wav</path>
+      <condition>
+        <equals>
+          <property>sim/model/door-positions/crew/position-norm</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </door>
+
+    <rain>
+      <name>rain</name>
+      <mode>looped</mode>
+      <path>rain.wav</path>
+      <condition>
+        <greater-than>
+          <property>/environment/metar/rain-norm</property>
+          <value>0.2</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <property>/environment/metar/rain-norm</property>
+        <factor>1.00</factor>
+        <offset>0.00</offset>
+        <min>0.4</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.001</factor>
+        <offset>1.0</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </rain>
+
+  </fx>
+
+</PropertyList>

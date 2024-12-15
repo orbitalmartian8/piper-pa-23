@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="views.xml">
+
+    <fuel-fraction>1</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Piper-PA-23/pa23-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path          archive="y">Aircraft/Piper-PA-23/Sounds/pa23-sound.xml</path>
+    </sound>
+
+    <model>
+      <path          archive="y">Aircraft/Piper-PA-23/Models/pa23.xml</path>
+      <livery>
+        <file        type="string"/>
+      </livery>
+      <show-yoke     type="bool"/>
+    </model>
+
+    <systems         include="rules.xml"/>
+
+    <instrumentation include="initialisation.xml"/>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int    n="0"  type="int"> 0</int>
+        <int    n="1"  type="int"> 0</int>
+        <int    n="2"  type="int"> 0</int>
+        <int    n="3"  type="int"> 0</int>
+        <int    n="4"  type="int"> 0</int>
+        <int    n="5"  type="int"> 0</int>
+        <int    n="6"  type="bool">1</int>
+        <int    n="7"  type="int"> 0</int>
+        <int    n="8"  alias="/systems/electrical/outputs/nav-lights">0</int>
+        <int    n="9"  alias="/sim/model/lights/beacon/state">false</int>
+        <float  n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float  n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float  n="2"  alias="/position/gear-agl-m">0</float>
+        <float  n="3"  alias="/position/altitude-ft">0</float>
+        <float  n="4"  alias="/engines/engine[0]/rpm"/>
+        <float  n="5"  alias="/engines/engine[0]/cranking"/>
+        <float  n="6"  alias="/engines/engine[1]/rpm"/>
+        <float  n="7"  alias="/engines/engine[1]/cranking"/>
+        <!-- For Bombable -->
+        <int    n="10" type="int" alias="controls/armament/trigger">0</int>
+        <string n="9"  type="string"/>
+      </generic>
+    </multiplay>
+
+    <help            include="help.xml"/>
+
+    <pa23            include="pa23.xml"/>
+
+    <flaps           include="flaps.xml"/>
+
+    <menubar         include="../Dialogs/pa23-menu.xml"/>
+
+    <gears           include="gears.xml"/>
+
+    <aircraft-data   include="aircraft-data.xml"/>
+
+  </sim>
+
+  <input             include="pa23-keyboard.xml"/>
+
+  <controls          include="controls.xml"/>
+
+  <instrumentation   include="instrumentation.xml"/>
+
+  <systems           include="systems.xml"/>
+
+  <autopilot         include="autopilot.xml"/>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Piper-PA-23/Nasal/doors.nas</file>
+    </doors>
+    <pa23>
+      <file>Aircraft/Piper-PA-23/Nasal/hdr.nas</file>
+      <file>Aircraft/Piper-PA-23/Nasal/light.nas</file>
+      <file>Aircraft/Piper-PA-23/Nasal/millibar.nas</file>
+      <file>Aircraft/Piper-PA-23/Nasal/liveries.nas</file>
+      <file>Aircraft/Piper-PA-23/Nasal/convert.nas</file>
+      <file>Aircraft/Piper-PA-23/Nasal/Electrical.nas</file>
+    </pa23>
+    <kns80>
+      <file>Aircraft/Piper-PA-23/Models/Interior/Panel/Instruments/kns80/kns80.nas</file>
+    </kns80>
+    <water>
+      <file>Aircraft/Piper-PA-23/Nasal/onwater.nas</file>
+    </water>
+    <engines>
+      <file>Aircraft/Piper-PA-23/Nasal/engines-yasim.nas</file>
+    </engines>
+
+    aircraft.data.add(
+      "instrumentation/nav[0]/audio-btn",
+      "instrumentation/nav[0]/power-btn",
+      "instrumentation/nav[0]/frequencies/selected-mhz",
+      "instrumentation/nav[0]/frequencies/standby-mhz",
+      "instrumentation/comm[0]/volume",
+      "instrumentation/comm[0]/frequencies/selected-mhz",
+      "instrumentation/comm[0]/frequencies/standby-mhz",
+      "instrumentation/comm[0]/test-btn",
+      "instrumentation/dme[0]/serviceable",
+      "instrumentation/nav[0]/volume";
+      "instrumentation/dme[0]/in-range",
+      "instrumentation/dme[0]/indicated-distance-nm",
+      "instrumentation/dme[0]/frequencies/selected-mhz",
+      "instrumentation/dme[0]/frequencies/source",
+
+      "instrumentation/nav[1]/audio-btn",
+      "instrumentation/nav[1]/power-btn",
+      "instrumentation/nav[1]/frequencies/selected-mhz",
+      "instrumentation/nav[1]/frequencies/standby-mhz",
+      "instrumentation/comm[1]/volume",
+      "instrumentation/comm[1]/frequencies/selected-mhz",
+      "instrumentation/comm[1]/frequencies/standby-mhz",
+      "instrumentation/comm[1]/test-btn",
+      "instrumentation/dme[1]/serviceable",
+      "instrumentation/nav[1]/volume";
+      "instrumentation/dme[1]/in-range",
+      "instrumentation/dme[1]/indicated-distance-nm",
+      "instrumentation/dme[1]/frequencies/selected-mhz",
+      "instrumentation/dme[1]/frequencies/source"
+    );
+
+  </nasal>
+
+</PropertyList>

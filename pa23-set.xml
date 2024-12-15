@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Systems/pa23-base.xml">
+
+  <sim>
+
+    <description>Piper Pa 23 Apache (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+    <minimum-fg-version>2018.2.0</minimum-fg-version>
+
+    <flight-model archive="y">yasim</flight-model>
+    <aero         archive="y">Systems/FDM/pa23-yasim</aero>
+
+    <model>
+      <mode       type="string">wheels</mode>
+    </model>
+
+    <rating>
+      <FDM        type="int"> 3 </FDM>
+      <systems    type="int"> 2 </systems>
+      <cockpit    type="int"> 3 </cockpit>
+      <model      type="int"> 4 </model>
+    </rating>
+
+    <previews>
+      <preview>
+        <type>interior</type>
+        <splash   type="bool">true</splash>
+        <path>Previews/pa23-0.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash   type="bool">true</splash>
+        <path>Previews/pa23-1.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash   type="bool">true</splash>
+        <path>Previews/pa23-2.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash   type="bool">true</splash>
+        <path>Previews/pa23-3.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash   type="bool">true</splash>
+        <path>Previews/pa23-4.png</path>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <splash   type="bool">true</splash>
+        <path>Previews/pa23-5.png</path>
+      </preview>
+    </previews>
+
+    <tags>
+      <tag>piper</tag>
+      <tag>transport</tag>
+      <tag>1950s</tag>
+      <tag>1960s</tag>
+      <tag>1970s</tag>
+      <tag>1980s</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>2010s</tag>
+      <tag>2020s</tag>
+      <tag>retractable-gear</tag>
+      <tag>ifr</tag>
+      <tag>piston</tag>
+      <tag>supercharged</tag>
+      <tag>propeller</tag>
+      <tag>variable-pitch</tag>
+      <tag>twin-engine</tag>
+      <tag>compositor</tag>
+      <tag>HDR</tag>
+    </tags>
+
+  </sim>
+
+</PropertyList>
