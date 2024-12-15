@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>pedalsR.ac</path>
+  
+  <animation>
+    <object-name>pedalL</object-name>
+    <object-name>tubesL</object-name>
+    <object-name>pedalR</object-name>
+    <object-name>tubesR</object-name>
+  </animation>
+  
+  <animation>
+    <name>PedalLeft</name>
+    <object-name>pedalL</object-name>
+    <object-name>tubesL</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>PedalLeft</object-name>
+    <property>controls/flight/rudder</property>
+    <factor> 20 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>pedalL</object-name>
+    <property>controls/gear/brake-left</property>
+    <factor> -10 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>PedalRight</name>
+    <object-name>pedalR</object-name>
+    <object-name>tubesR</object-name>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>PedalRight</object-name>
+    <property>controls/flight/rudder</property>
+    <factor> -20 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>pedalR</object-name>
+    <property>controls/gear/brake-right</property>
+    <factor> -10 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
